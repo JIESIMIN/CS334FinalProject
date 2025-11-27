@@ -68,16 +68,7 @@ def select_features(trainDF, testDF):
     trainDfSel = trainDF.drop(columns=columnsToDrop)
     testDfSel = testDF.drop(columns=columnsToDrop)
 
-
     return trainDfSel, testDfSel
-
-
-
-#Preprocessing (Catherine): standardize numerical values (StandardScalar), variance filtering (remove features with near 0 variance)
-
-#Feature selection (Catherine): Pearson correlation
-
-#Logistic regression (Catherine): LASSO/Ridge (for feature selection)
 
 def eval_gridsearch(clf, pgrid, xTrain, yTrain, xTest, yTest):
     start = time.time()
@@ -260,4 +251,5 @@ def main():
     print(perfDF)
 
 if __name__ == "__main__":
+
     main()
