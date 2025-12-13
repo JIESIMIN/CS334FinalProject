@@ -6,44 +6,50 @@ This project focuses on predicting diabetes status and identifying key risk fact
 - Predict diabetes status
 - Analyze and interpret important risk factors driving predictions
 ## Approach
-- 
+- Feature preprocessing and selection
+- Multiple supervised ML learning models
+- Hyperparameter tuning with cross-validation
+- Model explainability using SHAP
 
-- Preprocessing (Catherine): standardize numerical values (StandardScalar), variance filtering (remove features with near 0 variance)
-- Feature selection (Catherine): Pearson correlation
+# Data Splits
+- Training set: 90% of data
+- Holdout test set: 10% (25,368 samples)
+- Cross-validation: 5-fold CV applied on training data
 
-- Logistic regression (Catherine): LASSO/Ridge (for feature selection)
-- KNN (Nicky): Tuned the number of neighbors (k), distance metric, and voting weights to optimize multiclass classification performance.
-- Random Forest (Nicky): Tuned key hyperparameters including the number of trees, maximum tree depth, minimum samples per leaf, and minimum samples required for node splitting.
-- Gradient boost (Nicky): Tuned the learning rate, number of estimators, and maximum tree depth to improve predictive performance and generalization
-- XGboost (Jasmine):
-- FNN (Jasmine): 
+# Preprocessing & Feature Engineering
+- Numerical Standardization
+- Variance filtering
+- Feature selection
 
-For each model: 5-fold CV, GridSearchCV (hyperparameter selection), SHAP analysis (top 10)
-Metrics: Acc, Precision, Recall, F1, AUCROC
+# Models Implemented
+We implemented Logistic Regression, K-Nearest Neighbors, Random Forest, Gradient Boosting, XGBoost, and Feedforward Neural Network.
 
-Holdout test set: 10% (25,368 samples)
-Training set: 90% 
+# Model Training & Evaluation 
+## For each model: 
+- 5-fold CV
+- Hyperparameter tuning via GridSearchCV
+- SHAP analysis to identify the top 5 most important features
+## Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- AUROC
 
-# Run KNN, Random Forest, Gradient Boost
+# Reproducibility
+RANDOM_STATE = 42 used consistently across experiments
+
+# How to Run the Code
+## Core dependencies
+numpy, pandas, train_test_split, GridSearchCV, Pipeline, StandardScaler, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix, make_scorer, shap, matplotlib, seaborn
+## Model-specific dependencies
+KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier, MLPClassifier, xgboost
+
+## KNN, Random Forest, Gradient Boosting
 Open and run: knn_RF_GB.ipynb
 
-Dependencies (imports used in this notebook):
-- Core: numpy, pandas
-- Modeling (scikit-learn): train_test_split, GridSearchCV, Pipeline, StandardScaler, KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier
-- Metrics (scikit-learn): accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix, make_scorer
-- Explainability: shap
-- Visualization: matplotlib, seaborn
+## XGBoost
+Open and run: XGBoost.ipynb
 
-We set RANDOM_STATE = 42 for reproducibility.
-
-# FNN
-File: FNN.ipynb
-
-Dependencies: MLPClassifier
-
-# XGBoost
-XGBoost.ipynb
-
-Dependencies: xgboost
-
-
+## FNN
+Open and run: FNN.ipynb
