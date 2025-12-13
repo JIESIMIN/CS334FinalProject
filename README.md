@@ -1,5 +1,12 @@
-# CS334 Final Project
-Diabetes status prediction and risk factor analysis.
+# Diabetes Status Prediction and Risk Factor Analysis
+This project focuses on predicting diabetes status and identifying key risk factors using a combination of classical machine learning models and neural networks.
+
+# Project Overview
+## Goal: 
+- Predict diabetes status
+- Analyze and interpret important risk factors driving predictions
+## Approach
+- 
 
 - Preprocessing (Catherine): standardize numerical values (StandardScalar), variance filtering (remove features with near 0 variance)
 - Feature selection (Catherine): Pearson correlation
@@ -28,3 +35,15 @@ Dependencies (imports used in this notebook):
 - Visualization: matplotlib, seaborn
 
 We set RANDOM_STATE = 42 for reproducibility.
+
+# FNN
+File: FNN.ipynb
+
+Dependencies: MLPClassifier
+
+# XGBoost
+XGBoost.ipynb
+
+Dependencies: xgboost
+
+
