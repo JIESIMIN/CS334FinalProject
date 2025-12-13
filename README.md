@@ -21,10 +21,10 @@ Training set: 90%
 Open and run: knn_RF_GB.ipynb
 
 Dependencies (imports used in this notebook):
-Core: numpy, pandas
-Modeling (scikit-learn): train_test_split, GridSearchCV, Pipeline, StandardScaler, KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier
-Metrics (scikit-learn): accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix, make_scorer
-Explainability: shap
-Visualization: matplotlib, seaborn
+- Core: numpy, pandas
+- Modeling (scikit-learn): train_test_split, GridSearchCV, Pipeline, StandardScaler, KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier
+- Metrics (scikit-learn): accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix, make_scorer
+- Explainability: shap
+- Visualization: matplotlib, seaborn
 
 We set RANDOM_STATE = 42 for reproducibility.
