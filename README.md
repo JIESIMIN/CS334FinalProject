@@ -44,6 +44,9 @@ KNeighborsClassifier, RandomForestClassifier, GradientBoostingClassifier, MLPCla
 ## Reproducibility
 RANDOM_STATE = 42 used consistently across experiments
 
+## Preprocessing, Feature Selection and Extraction, Logistic Regression
+Open and run: Preprocessing_Feature_LR.py
+
 ## KNN, Random Forest, Gradient Boosting
 Open and run: knn_RF_GB.ipynb
 
